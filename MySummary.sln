@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyMvcSummary", "MyMvcSummary\MyMvcSummary.csproj", "{0611A2A1-A0B8-4410-B1FE-7EB2F6431B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.Utilities", "DotNet.Utilities\DotNet.Utilities.csproj", "{0A9704F9-7864-45AF-BFA7-E09F2B30A29F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationLogin.Tools", "AuthorizationLogin.Tools\AuthorizationLogin.Tools.csproj", "{17356A0F-D4B9-48D2-8AB1-FB8599EEFA02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0611A2A1-A0B8-4410-B1FE-7EB2F6431B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0611A2A1-A0B8-4410-B1FE-7EB2F6431B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0611A2A1-A0B8-4410-B1FE-7EB2F6431B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0611A2A1-A0B8-4410-B1FE-7EB2F6431B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9704F9-7864-45AF-BFA7-E09F2B30A29F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9704F9-7864-45AF-BFA7-E09F2B30A29F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9704F9-7864-45AF-BFA7-E09F2B30A29F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9704F9-7864-45AF-BFA7-E09F2B30A29F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17356A0F-D4B9-48D2-8AB1-FB8599EEFA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17356A0F-D4B9-48D2-8AB1-FB8599EEFA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17356A0F-D4B9-48D2-8AB1-FB8599EEFA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17356A0F-D4B9-48D2-8AB1-FB8599EEFA02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

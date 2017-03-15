@@ -1,0 +1,14 @@
+D:\person\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.csprojResolveAssemblyReference.cache
+D:\person\AuthorizationLogin.Tools\bin\Debug\AuthorizationLogin.Tools.dll
+D:\person\AuthorizationLogin.Tools\bin\Debug\AuthorizationLogin.Tools.pdb
+D:\person\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.dll
+D:\person\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.pdb
+D:\person\AuthorizationLogin.Tools\bin\Debug\Newtonsoft.Json.dll
+D:\person\AuthorizationLogin.Tools\bin\Debug\Newtonsoft.Json.xml
+D:\person\MySummary\AuthorizationLogin.Tools\bin\Debug\AuthorizationLogin.Tools.dll
+D:\person\MySummary\AuthorizationLogin.Tools\bin\Debug\AuthorizationLogin.Tools.pdb
+D:\person\MySummary\AuthorizationLogin.Tools\bin\Debug\Newtonsoft.Json.dll
+D:\person\MySummary\AuthorizationLogin.Tools\bin\Debug\Newtonsoft.Json.xml
+D:\person\MySummary\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.dll
+D:\person\MySummary\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.pdb
+D:\person\MySummary\AuthorizationLogin.Tools\obj\Debug\AuthorizationLogin.Tools.csprojResolveAssemblyReference.cache

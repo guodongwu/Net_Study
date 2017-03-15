@@ -1,0 +1,157 @@
+﻿<div ng-app="myApp" ng-controller="myCtrl" ng-init="quantity=2;cost=5">
+    {{theTime}}
+</div>
+@section scripts{
+    <script src="~/Scripts/angular.js"></script>
+    <script>
+
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $interval) {
+            $scope.theTime = new Date().toLocaleTimeString();
+            $interval(function () {
+                $scope.theTime = new Date().toLocaleTimeString();
+            }, 1000);
+        });
+
+    </script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script>
+        $(function () {
+
+            /*防刷新：检测是否存在cookie*/
+            if ($.cookie("captcha")) {
+                var count = $.cookie("captcha");
+                var btn = $('#second');
+                btn.val("重新发送(" + count + 's)').attr('disabled', true).css('cursor', 'not-allowed');
+                reSendSms(btn, count);
+            }
+            function reSendSms(btn, count) {
+                var resend = setInterval(function () {
+                    count--;
+                    if (count > 0) {
+                        btn.val("重新发送(" + count + 's)').attr('disabled', true).css('cursor', 'not-allowed');
+                        $.cookie("captcha", count, { path: '/', expires: (1 / 86400) * count });
+                    } else {
+                        clearInterval(resend);
+                        btn.val("获取验证码").removeAttr('disabled').css("cursor", "pointer");
+                    }
+                }, 1000);
+            }
+            /*点击改变按钮状态，已经简略掉ajax发送短信验证的代码*/
+            $('#second').click(function () {
+                var btn = $(this);
+                var count = 10;
+                reSendSms(btn, count);
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("#ajaxfileuploadButton").click(function () {
+                ajaxFileUpLoad();
+            })
+
+        });
+
+
+        function ajaxFileUpLoad() {
+            $.ajaxFileUpload(
+                {
+                    url: 'Handlers/FileUpload.ashx?method=ajaxFileUpload',
+                    secureuri: false,
+                    fileElementId: 'fileToUpload',
+                    dataType: 'json',
+                    success: function (data, status) {
+                        $('#img1').attr("src", data.imgurl);
+                        if (typeof (data.error) != 'undefined') {
+                            if (data.error != '') {
+                                alert(data.error);
+                            } else {
+                                alert(data.msg);
+                            }
+                        }
+                    },
+                    error: function (data, status, e) {
+                        alert(e);
+                    }
+                }
+            )
+            return false;
+        }
+    </script>
+}
+<input type="text" id="phonenum" />
+<input type="button" id="second" value="免费获取验证码" />
+
+<input type="file" id="fileToUpload" name="fileToUpload" />
+<input type="button" id="ajaxfileuploadButton" value="ajaxfileupload插件上传" />
+@ViewBag.AnimalSign
+@ViewBag.AuditStatus
+
+<!--MOB SHARE BEGIN-->
+<div class="-mob-share-ui-button -mob-share-open">分享</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo">
+            <p>新浪微博</p>
+        </li>
+        <li class="-mob-share-tencentweibo">
+            <p>腾讯微博</p>
+        </li>
+        <li class="-mob-share-qzone">
+            <p>QQ空间</p>
+        </li>
+        <li class="-mob-share-qq">
+            <p>QQ好友</p>
+        </li>
+        <li class="-mob-share-weixin">
+            <p>微信</p>
+        </li>
+        <li class="-mob-share-douban">
+            <p>豆瓣</p>
+        </li>
+        <li class="-mob-share-renren">
+            <p>人人网</p>
+        </li>
+        <li class="-mob-share-kaixin">
+            <p>开心网</p>
+        </li>
+        <li class="-mob-share-facebook">
+            <p>Facebook</p>
+        </li>
+        <li class="-mob-share-twitter">
+            <p>Twitter</p>
+        </li>
+        <li class="-mob-share-pocket">
+            <p>Pocket</p>
+        </li>
+        <li class="-mob-share-google">
+            <p>Google+</p>
+        </li>
+        <li class="-mob-share-youdao">
+            <p>有道云笔记</p>
+        </li>
+        <li class="-mob-share-mingdao">
+            <p>明道</p>
+        </li>
+        <li class="-mob-share-pengyou">
+            <p>朋友网</p>
+        </li>
+        <li class="-mob-share-tumblr">
+            <p>Tumblr</p>
+        </li>
+        <li class="-mob-share-instapaper">
+            <p>Instapaper</p>
+        </li>
+        <li class="-mob-share-linkedin">
+            <p>LinkedIn</p>
+        </li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share"
+    src="http://f1.webshare.mob.com/code/mob-share.js?appkey="></script>
+<!--MOB SHARE END-->
+
