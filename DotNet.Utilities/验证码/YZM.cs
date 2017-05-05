@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -234,15 +238,15 @@ namespace DotNet.Utilities.验证码
             set { brightnessValue = value; }
         }
         #endregion
-        /// <summary>  
-        /// 构造函数，用于初始化常用变量  
-        /// </summary>  
-        public ValidateCode()
-        {
-            random = new Random(Guid.NewGuid().GetHashCode());
-            strPoint = new Point[validationCodeCount + 1];
-            if (gaussianDeviation < 0) gaussianDeviation = 0;
-        }
+        ///// <summary>  
+        ///// 构造函数，用于初始化常用变量  
+        ///// </summary>  
+        //public ValidateCode()
+        //{
+        //    random = new Random(Guid.NewGuid().GetHashCode());
+        //    strPoint = new Point[validationCodeCount + 1];
+        //    if (gaussianDeviation < 0) gaussianDeviation = 0;
+        //}
 
         /// <summary>  
         /// 生成验证码  
@@ -1830,5 +1834,7 @@ namespace DotNet.Utilities.验证码
 
 
 
-    }  
+    }
+    #endregion
+
 }
