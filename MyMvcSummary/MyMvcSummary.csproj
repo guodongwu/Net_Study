@@ -281,6 +281,10 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jSignature\flashcanvas.js" />
+    <Content Include="Scripts\jSignature\flashcanvas.swf" />
+    <Content Include="Scripts\jSignature\jSignature.min.js" />
+    <Content Include="Scripts\jSignature\jSignature.min.noconflict.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />

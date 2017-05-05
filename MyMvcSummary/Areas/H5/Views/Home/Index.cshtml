@@ -2,4 +2,37 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<!--[if lt IE 9]>
+<script src="~/Scripts/jSignature/flashcanvas.js"></script>
+<![endif]-->
+
+<div id="signature"></div>
+<script src="~/Scripts/jSignature/jSignature.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#signature").jSignature()
+    })
+
+
+
+    var $sigdiv = $("#signature");
+    $sigdiv.jSignature(); //// inits的jSignature部件。
+    //一些涂鸦后......
+    $sigdiv.jSignature("reset"); //清除画布并重新渲染的装饰就可以了
+ 
+    // 获取签名的SVG和呈现在浏览器中的SVG. 
+    //此导出插件返回数组[MIMETYPE，签名的SVG的base64编码字符串划]
+    var datapair = $sigdiv.jSignature("getData", "svgbase64") ;
+    var i = new Image();
+    i.src = "data:" + datapair[0] + "," + datapair[1] ;
+    $(i).appendTo($("#someelement"));  // 添加图像（SVG），到 DOM
+ 
+    // 获取签名的“base30”数据对
+    datapair = $sigdiv.jSignature("getData", "base30");
+ 
+    //重新导入数据到jSignature。
+    $sigdiv.jSignature("setData", "data:" + datapair.join(","));
+</script>
+
+
