@@ -10,9 +10,10 @@ namespace MyMvcSummary.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public HttpResponseMessage Get()
         {
-            return new string[] { "value1", "value2" };
+            string json = "{\"result\":\"true\"}";
+            return new HttpResponseMessage { Content = new StringContent(json, System.Text.Encoding.UTF8, "application/json") };
         }
 
         // GET api/values/5

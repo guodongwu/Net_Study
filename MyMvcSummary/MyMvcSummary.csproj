@@ -41,8 +41,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1213">
+      <HintPath>..\packages\Common.Logging.Log4Net1213.3.3.1\lib\net40\Common.Logging.Log4Net1213.dll</HintPath>
+    </Reference>
     <Reference Include="DotNet.Utilities">
       <HintPath>..\DotNet.Utilities\bin\Debug\DotNet.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
@@ -66,6 +78,9 @@
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.5.0\lib\net40\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -159,6 +174,12 @@
       <Private>True</Private>
       <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="Topshelf">
+      <HintPath>..\packages\Topshelf.3.3.0\lib\net40-full\Topshelf.dll</HintPath>
+    </Reference>
+    <Reference Include="Topshelf.Log4Net">
+      <HintPath>..\packages\Topshelf.Log4Net.3.3.0\lib\net40-full\Topshelf.Log4Net.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.3.0.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
@@ -184,12 +205,57 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\H5\Controllers\HomeController.cs" />
     <Compile Include="Areas\H5\H5AreaRegistration.cs" />
+    <Compile Include="Areas\H5\Models\Entity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\sysdiagrams.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_DbBackup.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Department.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Dict.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Function.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Log.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Menu.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Menu_Function.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Organize.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Role.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_Role_Menu.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_User.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\H5\Models\Sys_User_Role.cs">
+      <DependentUpon>Entity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OAuthControllers\QQOAuthController.cs" />
     <Compile Include="Controllers\OAuthControllers\WechatController.cs" />
     <Compile Include="Controllers\OAuthControllers\WeiboController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -206,6 +272,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\H5\Models\Entity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Entity.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -265,6 +335,10 @@
     <Content Include="Scripts\ajaxfileupload.js" />
     <Content Include="Areas\H5\Views\Web.config" />
     <Content Include="Areas\H5\Views\Home\Index.cshtml" />
+    <Content Include="Areas\H5\Models\MultipleOutputHelper.ttinclude" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\h5_upload.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -322,7 +396,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\H5\Models\" />
     <Folder Include="Areas\H5\Views\Shared\" />
     <Folder Include="bin\" />
   </ItemGroup>

@@ -67,6 +67,7 @@
     <Compile Include="FTP操作类\FTPHelper.cs" />
     <Compile Include="FTP操作类\FTPOperater.cs" />
     <Compile Include="GridViewHelper.cs" />
+    <Compile Include="正则表达式\RegexTool.cs" />
     <Compile Include="网络\IpHelper.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="JS\JsHelper.cs" />
