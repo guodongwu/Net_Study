@@ -67,6 +67,7 @@
     <Compile Include="FTP操作类\FTPHelper.cs" />
     <Compile Include="FTP操作类\FTPOperater.cs" />
     <Compile Include="GridViewHelper.cs" />
+    <Compile Include="数据库辅助类\SQLiteHelper.cs" />
     <Compile Include="正则表达式\RegexTool.cs" />
     <Compile Include="网络\IpHelper.cs" />
     <Compile Include="Json\JsonHelper.cs" />
@@ -184,6 +185,9 @@
     <Reference Include="System.Data">
       <Private>True</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing">
       <Private>True</Private>

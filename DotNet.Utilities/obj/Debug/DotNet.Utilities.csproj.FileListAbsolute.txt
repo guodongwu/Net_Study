@@ -54,3 +54,4 @@ D:\person\MySummary\DotNet.Utilities\bin\Debug\NPOI.OOXML.dll
 D:\person\MySummary\DotNet.Utilities\bin\Debug\NPOI.OpenXml4Net.dll
 D:\person\MySummary\DotNet.Utilities\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\person\MySummary\DotNet.Utilities\bin\Debug\NPOI.xml
+D:\person\MySummary\DotNet.Utilities\bin\Debug\System.Data.SQLite.dll
